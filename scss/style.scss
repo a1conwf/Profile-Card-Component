@@ -1,0 +1,121 @@
+@import "./globals";
+@import "./variables";
+
+//Container
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+    //Card styling //
+    .card {
+        background-color: #fff;
+        border-radius: 1.5rem;
+        z-index: 9999;
+
+        //Card header//
+        &__header {
+            height: 140px;
+            background-image: url("../images/bg-pattern-card.svg");
+            background-size: cover;
+            border-radius: 1.5rem 1.5rem 0 0;
+        }
+
+        //Card body//
+        &__body {
+            text-align: center;
+
+            &__img {
+                width: 96px;
+                height: 96px;
+                margin: -5rem auto 2.4rem auto;
+                border: 0.5rem solid #fff;
+                border-radius: 50%;
+            }
+
+            &__title {
+                margin-bottom: 0.8rem;
+
+                .title__span {
+                    margin-left: 0.5rem;
+                    font-size: 1.8rem;
+                    font-weight: 400;
+                    color: $textColor;
+                }
+            }
+
+            &__text {
+                margin-bottom: 2.8rem;
+                font-size: 1.4rem;
+                line-height: 1.736rem;
+            }
+        }
+
+        //Horizontal line
+        .hor__line {
+            border: none;
+            border-bottom: 0.05rem solid #E8E9EC;
+        }
+
+        //Card footer
+        &__footer {
+            padding: 2.4rem 5.4rem 2.4rem 4.7rem;
+
+            .stats__container {
+                display: flex;
+                justify-content: space-between;
+
+                .stats__list {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    list-style: none;
+
+                    &__title {
+                        margin-bottom: 0.08rem;
+                        font-size: 1.8rem;
+                        font-weight: 700;
+                        color: $headingColor;
+                    }
+
+                    &__text {
+                        font-size: 1rem;
+                        color: $textColor;
+                        letter-spacing: 1.5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Media queries */
+@media screen and (min-width: 320px) {
+
+    //Card
+    .card {
+        width: 300px;
+
+        //Card footer
+        &__footer {
+            padding: 2.4rem 5.2rem 2.4rem 4.1rem;
+        }
+    }
+}
+
+@media screen and (min-width: 375px) {
+
+    //Card
+    .card {
+        width: 326px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    //Card
+    .card {
+        width: 350px;
+    }
+}
